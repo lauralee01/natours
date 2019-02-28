@@ -33,6 +33,12 @@
             display: inline-block;
             transition: all .2s;
             line-height: 1;
+
+        
+            @include respond(phone) {
+                top: 4.5rem;
+                left: 4.5rem;
+            }    
         }
 
         &:hover {
@@ -51,11 +57,20 @@
         opacity: 0;
         transform: translate(-50%, -50%) scale(.25);
         transition: all .5s .2s;
+
+        @include respond(phone) {
+            width: 100%;
+            position: relative;
+        }  
     }
 
     &__leftside {
         width: 33.333333%;
         display: table-cell;
+
+        @include respond(phone) {
+            float: left;
+        }
     }
 
     &__rightside {
@@ -63,6 +78,10 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include respond(phone) {
+            float: left;
+        }
     }
 
     &__img {
